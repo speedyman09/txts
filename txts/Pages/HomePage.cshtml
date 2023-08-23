@@ -40,7 +40,12 @@
             <button type="submit">Submit</button>
         </form>
     </div>
-
+    <div class="secondary-container">
+        <form method="POST" action="/search">
+            @Html.AntiForgeryToken()
+            <input name="search" id="search" placeholder="Search for a TXT here"/>
+        </form>
+    </div>
     <div class="tb-padding right">
         <button onclick="window.location.href = '/admin'">Site Administration</button>
     </div>
